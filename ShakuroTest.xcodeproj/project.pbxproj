@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C95891F1ABE183B007B07E0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C95891E1ABE183B007B07E0 /* Constants.swift */; };
+		3C9589221ABE1891007B07E0 /* PhotoSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C9589211ABE1891007B07E0 /* PhotoSearchAPI.swift */; };
 		3CB78FA51ABDE01A00BE4C28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB78FA41ABDE01A00BE4C28 /* AppDelegate.swift */; };
 		3CB78FA71ABDE01A00BE4C28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CB78FA61ABDE01A00BE4C28 /* ViewController.swift */; };
 		3CB78FAA1ABDE01A00BE4C28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3CB78FA81ABDE01A00BE4C28 /* Main.storyboard */; };
@@ -27,6 +29,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3C95891C1ABE183B007B07E0 /* Bridging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bridging.h; sourceTree = "<group>"; };
+		3C95891E1ABE183B007B07E0 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3C9589211ABE1891007B07E0 /* PhotoSearchAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoSearchAPI.swift; sourceTree = "<group>"; };
 		3CB78F9F1ABDE01A00BE4C28 /* ShakuroTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShakuroTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CB78FA31ABDE01A00BE4C28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3CB78FA41ABDE01A00BE4C28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,6 +75,30 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		3C95891B1ABE183B007B07E0 /* Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				3C95891C1ABE183B007B07E0 /* Bridging.h */,
+			);
+			path = Bridging;
+			sourceTree = "<group>";
+		};
+		3C95891D1ABE183B007B07E0 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				3C95891E1ABE183B007B07E0 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		3C9589201ABE1879007B07E0 /* APIs */ = {
+			isa = PBXGroup;
+			children = (
+				3C9589211ABE1891007B07E0 /* PhotoSearchAPI.swift */,
+			);
+			path = APIs;
+			sourceTree = "<group>";
+		};
 		3CB78F961ABDE01A00BE4C28 = {
 			isa = PBXGroup;
 			children = (
@@ -93,6 +122,7 @@
 		3CB78FA11ABDE01A00BE4C28 /* ShakuroTest */ = {
 			isa = PBXGroup;
 			children = (
+				3C9589201ABE1879007B07E0 /* APIs */,
 				3CB78FA41ABDE01A00BE4C28 /* AppDelegate.swift */,
 				3CB78FA61ABDE01A00BE4C28 /* ViewController.swift */,
 				3CB78FA81ABDE01A00BE4C28 /* Main.storyboard */,
@@ -106,6 +136,8 @@
 		3CB78FA21ABDE01A00BE4C28 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3C95891B1ABE183B007B07E0 /* Bridging */,
+				3C95891D1ABE183B007B07E0 /* Constants */,
 				3CB78FA31ABDE01A00BE4C28 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -272,7 +304,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CB78FA71ABDE01A00BE4C28 /* ViewController.swift in Sources */,
+				3C9589221ABE1891007B07E0 /* PhotoSearchAPI.swift in Sources */,
 				3CB78FA51ABDE01A00BE4C28 /* AppDelegate.swift in Sources */,
+				3C95891F1ABE183B007B07E0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -401,6 +435,7 @@
 				INFOPLIST_FILE = ShakuroTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ShakuroTest/Bridging/Bridging.h;
 			};
 			name = Debug;
 		};
@@ -412,6 +447,7 @@
 				INFOPLIST_FILE = ShakuroTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = ShakuroTest/Bridging/Bridging.h;
 			};
 			name = Release;
 		};

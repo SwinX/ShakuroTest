@@ -28,7 +28,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="search:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUe-T9-z3U"/>
+                                    <action selector="search" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gwg-wv-Clv"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vxD-Hq-uGP">

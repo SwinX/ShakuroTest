@@ -9,24 +9,32 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
     @IBOutlet weak var searchTextField: UITextField!
-    
     @IBOutlet weak var picture: UIImageView!
+    
+    var photoSearchAPI: PhotoSearchAPI;
+    
+    required init(coder aDecoder: NSCoder) {
+        self.photoSearchAPI = PhotoSearchAPI();
+        super.init(coder: aDecoder);
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     //Actions
-    @IBAction func search(sender: AnyObject) {
+    @IBAction func search() {
+        //progress later
+        let searchText = self.searchTextField.text;
+        if (countElements(searchText) != 0) {
+            self.photoSearchAPI.searchPhoto(searchText, handler: { (error, url) -> Void in
+                if (error == nil) {
+                    return print(error);
+                }
+                return print(url);
+            })
+        }
     }
-    
 }
 
