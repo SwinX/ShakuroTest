@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShakuroTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,8 +16,48 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aNN-Og-fYa">
+                                <rect key="frame" x="16" y="40" width="521" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gHv-wv-31w">
+                                <rect key="frame" x="545" y="40" width="39" height="30"/>
+                                <state key="normal" title="Show">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="search:" destination="BYZ-38-t0r" eventType="touchUpInside" id="TUe-T9-z3U"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vxD-Hq-uGP">
+                                <rect key="frame" x="26" y="80" width="548" height="510"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vxD-Hq-uGP" firstAttribute="top" secondItem="aNN-Og-fYa" secondAttribute="bottom" constant="10" id="C2A-BT-UnZ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vxD-Hq-uGP" secondAttribute="trailing" constant="10" id="HWa-5L-CZG"/>
+                            <constraint firstItem="vxD-Hq-uGP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="LVf-jL-RX9"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vxD-Hq-uGP" secondAttribute="bottom" constant="10" id="M8O-pQ-QeF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="aNN-Og-fYa" secondAttribute="trailing" constant="54" id="a36-zc-9pT"/>
+                            <constraint firstItem="gHv-wv-31w" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aVU-u4-Vo9"/>
+                            <constraint firstItem="gHv-wv-31w" firstAttribute="leading" secondItem="aNN-Og-fYa" secondAttribute="trailing" constant="8" id="kgc-eQ-aWy"/>
+                            <constraint firstItem="aNN-Og-fYa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ooU-2d-yaA"/>
+                            <constraint firstItem="aNN-Og-fYa" firstAttribute="centerY" secondItem="gHv-wv-31w" secondAttribute="centerY" id="yZX-JR-JkY"/>
+                            <constraint firstItem="aNN-Og-fYa" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zzB-Xh-KeU"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="a36-zc-9pT"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="picture" destination="vxD-Hq-uGP" id="6vF-or-Wyg"/>
+                        <outlet property="searchTextField" destination="aNN-Og-fYa" id="9eu-Wi-BAZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
