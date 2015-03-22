@@ -11,5 +11,6 @@
 
 #import <AFNetworking/AFNetworking.h>
 #import <BFRadialWaveHUD/BFRadialWaveHUD.h>
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #endif
