@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         let searchText = self.searchTextField.text;
         if (countElements(searchText) != 0) {
             self.photoSearchAPI.searchPhoto(searchText, handler: { (error, url) -> Void in
-                if (error == nil) {
+                if (error != nil) {
                     return print(error);
                 }
                 return print(url);

@@ -20,21 +20,11 @@ class PhotoSearchAPI {
     }
     
     func searchPhoto(name: String, handler: PhotoSearchHandler?) {
-        var params = [
-            "method": "flickr.photos.search",
-            "api_key": FlickrKey,
-            "text": name,
-            "safe_search": 1,
-            "per_page": 1,
-            "nojsoncallback": 1,
-            "format": "json"
-        ];
         self.manager.GET("services/rest",
-            parameters: params,
+            parameters: photoRequestParams(name),
             success:{ (operation, result) -> Void in
                 print(result);
-                var photo = result["photos"];
-                handler?(error: nil, url: nil);
+                handler?(error: nil, url: self.urlForFlickrPhoto(result as NSDictionary));
             },
             failure: { (operation, error) -> Void in
                 print(error);
@@ -42,4 +32,36 @@ class PhotoSearchAPI {
             }
         )
     }
+    
+    private func photoRequestParams(photoName: String) -> NSDictionary {
+        return [
+            "method": "flickr.photos.search",
+            "api_key": FlickrKey,
+            "text": photoName,
+            "safe_search": 1,
+            "per_page": 1,
+            "nojsoncallback": 1,
+            "format": "json"
+        ];
+    }
+    
+    private func urlForFlickrPhoto(photoDescription: NSDictionary) -> NSURL? {
+        //Using obj-c collections because AFNetworking returns it
+        let photosContainer: NSDictionary = photoDescription["photos"] as NSDictionary;
+        let photos: NSArray = photosContainer["photo"] as NSArray;
+        if photos.count > 0 {
+            return NSURL(string: self.buildUrlForPhoto(photos[0] as NSDictionary));
+        } else {
+            return nil;
+        }
+    }
+    
+    private func buildUrlForPhoto(photo: NSDictionary) -> String {
+        let farm: Int = photo["farm"] as Int;
+        let server: String = photo["server"] as String;
+        let id: String = photo["id"] as String;
+        let secret: String = photo["secret"] as String;
+        return "https://farm\(farm).staticflickr.com/\(server)/\(id)_\(secret).jpg";
+    }
+    
 }
