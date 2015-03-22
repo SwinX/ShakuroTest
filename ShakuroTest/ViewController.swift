@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var message: UILabel!
     
     var photoSearchAPI: PhotoSearchAPI!;
-    var progressHud: BFRadialWaveHUD!;
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder);
@@ -29,7 +28,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        progressHud = BFRadialWaveHUD(view: self.view, fullScreen: false, circles: ProgressHudCirclesAmount, circleColor: nil, mode: BFRadialWaveHUDMode.Default, strokeWidth: CGFloat(ProgressHudStrokeWidth))
     }
 
     //Actions
@@ -61,11 +59,11 @@ class ViewController: UIViewController {
     }
     
     private func showProgress() {
-        progressHud.showWithMessage(ProgressText);
+        SVProgressHUD.show();
     }
     
     private func hideProgress() {
-        progressHud.dismiss();
+        SVProgressHUD.dismiss();
     }
     
     private func showError(error: NSError) {

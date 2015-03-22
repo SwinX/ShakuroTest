@@ -10,7 +10,7 @@
 #define ShakuroTest_Bridging_h
 
 #import <AFNetworking/AFNetworking.h>
-#import <BFRadialWaveHUD/BFRadialWaveHUD.h>
+#import <SVProgressHud/SVProgressHud.h>
 #import <SDWebImage/UIImageView+WebCache.h>
 
 #endif

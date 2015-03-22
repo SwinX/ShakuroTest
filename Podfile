@@ -4,7 +4,7 @@
 target 'ShakuroTest' do
 
 pod 'AFNetworking', '~> 2.5.1'
-pod 'BFRadialWaveHUD', '~> 1.3.6'
+pod 'SVProgressHUD', '~> 1.1.2'
 pod 'SDWebImage', '~> 3.7.2'
 
 end
