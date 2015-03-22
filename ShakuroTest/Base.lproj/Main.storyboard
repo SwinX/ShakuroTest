@@ -31,18 +31,28 @@
                                     <action selector="search" destination="BYZ-38-t0r" eventType="touchUpInside" id="Gwg-wv-Clv"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vxD-Hq-uGP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter image query" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uDD-gb-BVI">
+                                <rect key="frame" x="66" y="290.5" width="468" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vxD-Hq-uGP">
                                 <rect key="frame" x="26" y="80" width="548" height="510"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="vxD-Hq-uGP" firstAttribute="top" secondItem="aNN-Og-fYa" secondAttribute="bottom" constant="10" id="C2A-BT-UnZ"/>
+                            <constraint firstItem="uDD-gb-BVI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="GHr-nR-E2v"/>
                             <constraint firstAttribute="trailingMargin" secondItem="vxD-Hq-uGP" secondAttribute="trailing" constant="10" id="HWa-5L-CZG"/>
                             <constraint firstItem="vxD-Hq-uGP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="LVf-jL-RX9"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="vxD-Hq-uGP" secondAttribute="bottom" constant="10" id="M8O-pQ-QeF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aNN-Og-fYa" secondAttribute="trailing" constant="54" id="a36-zc-9pT"/>
                             <constraint firstItem="gHv-wv-31w" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="aVU-u4-Vo9"/>
+                            <constraint firstAttribute="centerX" secondItem="uDD-gb-BVI" secondAttribute="centerX" id="deE-R6-OL2"/>
+                            <constraint firstAttribute="centerY" secondItem="uDD-gb-BVI" secondAttribute="centerY" constant="-0.5" id="hDh-Dq-6Fm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="uDD-gb-BVI" secondAttribute="trailing" constant="50" id="hhm-Nq-BSF"/>
                             <constraint firstItem="gHv-wv-31w" firstAttribute="leading" secondItem="aNN-Og-fYa" secondAttribute="trailing" constant="8" id="kgc-eQ-aWy"/>
                             <constraint firstItem="aNN-Og-fYa" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ooU-2d-yaA"/>
                             <constraint firstItem="aNN-Og-fYa" firstAttribute="centerY" secondItem="gHv-wv-31w" secondAttribute="centerY" id="yZX-JR-JkY"/>
