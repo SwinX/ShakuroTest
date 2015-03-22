@@ -10,7 +10,7 @@ import UIKit
 
 typealias ShowImageCallback = (error: NSError?) -> Void
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
     
     private let ProgressText = "Loading image..."
     private let NotFoundText = "No images found."
@@ -58,6 +58,15 @@ class ViewController: UIViewController {
             })
         }
     }
+    
+    //MARK: UITextFieldDelegate implementation
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        self.search();
+        return true;
+    }
+    
+    
+    //MARK: Private methods
     
     private func showProgress() {
         SVProgressHUD.show();

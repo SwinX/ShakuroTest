@@ -219,6 +219,7 @@
 				TargetAttributes = {
 					3CB78F9E1ABDE01A00BE4C28 = {
 						CreatedOnToolsVersion = 6.2;
+						DevelopmentTeam = NZP82U4H8S;
 					};
 					3CB78FB31ABDE01A00BE4C28 = {
 						CreatedOnToolsVersion = 6.2;
@@ -432,9 +433,12 @@
 			baseConfigurationReference = 45FF0D4EEBB05ED9D06904C4 /* Pods-ShakuroTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ShakuroTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = ShakuroTest/Bridging/Bridging.h;
 			};
 			name = Debug;
@@ -444,9 +448,12 @@
 			baseConfigurationReference = 644800EA1E253940D8CFD5B5 /* Pods-ShakuroTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ShakuroTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = ShakuroTest/Bridging/Bridging.h;
 			};
 			name = Release;
