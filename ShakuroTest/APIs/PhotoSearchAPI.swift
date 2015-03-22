@@ -22,7 +22,7 @@ class PhotoSearchAPI {
     func searchPhoto(name: String, handler: PhotoSearchHandler?) {
         self.manager.GET("services/rest",
             parameters: photoRequestParams(name),
-            success:{ (operation, result) -> Void in
+            success:{[unowned self] (operation, result) -> Void in
                 print(result);
                 handler?(error: nil, url: self.urlForFlickrPhoto(result as NSDictionary));
             },
