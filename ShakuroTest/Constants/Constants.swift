@@ -10,3 +10,6 @@ let FlickrBaseUrl = "https://api.flickr.com/"
 let FlickrKey = "e95e75a9892be0e8587810be066c62fb"
 let FlickrSecret = "1e86081eeddae69a"
 
+let ProgressHudCirclesAmount = 10
+let ProgressHudStrokeWidth = 1.0
+
