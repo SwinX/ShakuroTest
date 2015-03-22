@@ -35,6 +35,7 @@ class ViewController: UIViewController {
         //progress later
         let searchText = self.searchTextField.text;
         if (countElements(searchText) != 0) {
+            self.searchTextField.resignFirstResponder();
             self.showProgress();
             self.photoSearchAPI.searchPhoto(searchText, handler: {[unowned self] (error, url) -> Void in
                 if (error != nil) {
