@@ -4,6 +4,7 @@
 target 'ShakuroTest' do
 
 pod 'AFNetworking', '~> 2.5.1'
+pod 'BFRadialWaveHUD', '~> 1.3.6'
 
 end
 

@@ -10,5 +10,6 @@
 #define ShakuroTest_Bridging_h
 
 #import <AFNetworking/AFNetworking.h>
+#import <BFRadialWaveHUD/BFRadialWaveHUD.h>
 
 #endif
